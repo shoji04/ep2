@@ -76,3 +76,15 @@ def foi_derrotado(matriz):
         if 'N' in linha:
             return False
     return True
+
+print (" Batalha naval \n Iniciando o Jogo! \n  ")
+
+print (" Computador esta alocando os navios de guerra do pais ... \n computador ja esta em posicao de batalha ! \n ")
+
+print (" 1 : Brasil \n     1 cruzador \n     2 torpedeiro \n     1 destroyer \n     1 couracado \n     1 porta-avioes \n  ") 
+print (" 2 : franca \n     3 cruzador \n     1 torpedeiro \n     1 destroyer \n     1 couracado \n     1 porta-avioes \n  ") 
+print (" 3 : australia \n     1 cruzador \n     3 torpedeiro \n     1 destroyer \n     1 couracado \n     1 porta-avioes \n  ") 
+print (" 4 : russia \n     1 cruzador \n     1 torpedeiro \n     2 destroyer \n     1 couracado \n     1 porta-avioes \n  ") 
+print (" 5 : japao \n     2 cruzador \n     1 torpedeiro \n     2 destroyer \n     1 couracado \n     1 porta-avioes \n  ") 
+        
+escolha_pais = int(input('Qual o numero da sua frota ?'))
