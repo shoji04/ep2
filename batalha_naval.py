@@ -1,4 +1,5 @@
 import random
+import time
 from constantes import CONFIGURACAO, PAISES, ALFABETO, CORES
 
 #Cria matriz quadrada de espaços
@@ -117,20 +118,31 @@ navio_atingido = cor_atingido + navio_ + reset
 agua_final = cor_agua + navio_ + reset
 
 
-def mostraMapa(mat1, mat2,comp,jog):
-        print(f'     COMPUTADOR - {comp}                 JOGADOR - {jog}     \n')
-        print('   A  B  C  D  E  F  G  H  I  J        A  B  C  D  E  F  G  H  I  J')
-        for linha in range(10):
-            print(f'{linha+1:2d}', end='')
-            for coluna in range(10):
-                print(f' {mat1[linha][coluna]} ', end='')
-            print(f'{linha+1:2d}', end='')
-            print(f'  {linha+1:2d}', end='')
-            for coluna in range(10):
-                print(f' {mat2[linha][coluna]} ', end='')
-            print(f'{linha+1:2d}', end='')
-            print(' ')
-        print('   A  B  C  D  E  F  G  H  I  J        A  B  C  D  E  F  G  H  I  J')
+def mostraMapa(mat1, mat2, comp, jog):
+    print(f'     COMPUTADOR - {comp}                 JOGADOR - {jog}     \n')
+    print('   A  B  C  D  E  F  G  H  I  J        A  B  C  D  E  F  G  H  I  J')
+
+    linha = 0
+    while linha < 10:
+        print(f'{linha + 1:2d}', end='')
+        
+        coluna = 0
+        while coluna < 10:
+            print(f' {mat1[linha][coluna]} ', end='')
+            coluna += 1
+        
+        print(f'{linha + 1:2d}', end='')
+        print(f'  {linha + 1:2d}', end='')
+        
+        coluna = 0
+        while coluna < 10:
+            print(f' {mat2[linha][coluna]} ', end='')
+            coluna += 1
+        
+        print(f'{linha + 1:2d}')
+        linha += 1
+    
+    print('   A  B  C  D  E  F  G  H  I  J        A  B  C  D  E  F  G  H  I  J')
 
 escolha_paispais = int(escolha_pais)
 escolhido = paises[escolha_pais]
